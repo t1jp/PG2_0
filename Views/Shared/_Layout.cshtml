@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Proyecto_Graduacion</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Proyecto_Graduacion.styles.css" asp-append-version="true" />
+</head>
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="index.html">Sistema de Auditoria</a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        @*<form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+        <div class="input-group">
+        <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+        <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+        </div>
+        </form>*@
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto me-0 me-md-3 my-2 my-md-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Cerrar Sesion</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <a class="nav-link" asp-action="Index" asp-controller="Home">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Dashboard
+                        </a>
+                        <a class="nav-link" asp-action="Index" asp-controller="Usuarios">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Usuarios
+                        </a>
+                        <a class="nav-link" asp-action="Index" asp-controller="Rol">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Roles
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Ingreso de Datos</div>
+                        <a class="nav-link" asp-action="Index" asp-controller="Institucion">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Institucion
+                        </a>
+                        <a class="nav-link" asp-action="Index" asp-controller="Auditoria">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Auditoria
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCon" aria-expanded="false" aria-controls="collapseCon">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Conocimiento y Comprension de la Entidad
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseCon" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                    Entrevistas y Encuestas
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" asp-action="Index" asp-controller="Entrevista">Entrevista</a>
+                                        <a class="nav-link" asp-action="Index" asp-controller="Encuesta">Encuesta</a>
+                                    </nav>
+                                </div>
+                                <a class="nav-link" asp-action="Index" asp-controller="AnalisisComparativoEsFin">Analisis Comparativos de Estados Financieros</a>
+                                <a class="nav-link" asp-action="Index" asp-controller="Foda">FODA</a>
+                                <a class="nav-link" asp-action="Index" asp-controller="CausaEfecto">Causa-Efecto</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link" asp-action="Index" asp-controller="ObjetivoAlcance">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Objetivos y Alcance de la Auditoria
+                        </a>
+                        <a class="nav-link" asp-action="Index" asp-controller="AnalisisPreliminar">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Análisis Preliminar del Control Interno
+                        </a>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseAnaRiMat" aria-expanded="false" aria-controls="collapseAnaRiMat">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Análisis de los Riesgos y la Materialidad
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseAnaRiMat" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" asp-action="Index" asp-controller="Riesgo">Riesgo</a>
+                                <a class="nav-link" asp-action="Index" asp-controller="Materialidad">Materialidad</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link" asp-action="Index" asp-controller="PlaneacionEspecifica">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Planeación Especifica de la Auditoria
+                        </a>
+                        <a class="nav-link" asp-action="Index" asp-controller="ElaboracionPrograma">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Elaboración de Programa de Auditoria
+                        </a>
+                        <a class="nav-link" asp-action="Index" asp-controller="PruebasAuditoria">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Pruebas de Auditoria
+                        </a>
+                        <a class="nav-link" asp-action="Index" asp-controller="ElaboracionPrograma">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Tecnicas de Muestreo
+                        </a>
+                        <a class="nav-link" asp-action="Index" asp-controller="EvidenciaAuditoria">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Evidencias de la Auditoria
+                        </a>
+                        <a class="nav-link" asp-action="Index" asp-controller="Papeles">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Papeles de Trabajo
+                        </a>
+                        <a class="nav-link" asp-action="Index" asp-controller="Hallazgos">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Hallazgos de la Auditoria
+                        </a>
+                        <a class="nav-link" asp-action="Index" asp-controller="Informe">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Generar Informe
+                        </a>
+                        @*<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                        Pages
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                        Authentication
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                        <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="login.html">Login</a>
+                        <a class="nav-link" href="register.html">Register</a>
+                        <a class="nav-link" href="password.html">Forgot Password</a>
+                        </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                        Error
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                        <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="401.html">401 Page</a>
+                        <a class="nav-link" href="404.html">404 Page</a>
+                        <a class="nav-link" href="500.html">500 Page</a>
+                        </nav>
+                        </div>
+                        </nav>
+                        </div>*@
+                        @*<div class="sb-sidenav-menu-heading">Addons</div>
+                        <a class="nav-link" href="charts.html">
+                        <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                        Charts
+                        </a>
+                        <a class="nav-link" href="tables.html">
+                        <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                        Tables
+                        </a>*@
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    Jose.Amaya
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                @RenderBody()
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
