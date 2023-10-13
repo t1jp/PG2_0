@@ -88,6 +88,7 @@ public partial class Pg20Context : DbContext,IAppDbContext
     {
 
         modelBuilder.Entity<entrevistaaudit>(e => e.HasNoKey());
+        modelBuilder.Entity<encuestaaudit>(e => e.HasNoKey());
         modelBuilder.Entity<Auditoria>(entity =>
         {
             entity.HasKey(e => e.IdAuditoria);
@@ -665,4 +666,6 @@ public partial class Pg20Context : DbContext,IAppDbContext
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 
     public DbSet<Proyecto_Graduacion.Models.EntrevistaViewModel>? EntrevistaViewModel { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.EncuestaViewModel>? EncuestaViewModel { get; set; }
 }

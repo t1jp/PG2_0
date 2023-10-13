@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Proyecto_Graduacion.Models.EntrevistaViewModel>
+﻿@model IEnumerable<Proyecto_Graduacion.Models.EncuestaViewModel>
 
 @{
     ViewData["Title"] = "Index";
@@ -31,8 +31,8 @@
                 @Html.DisplayFor(modelItem => item.Auditoria)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdEntrevista">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdEntrevista">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdEncuesta">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdEncuesta">Delete</a>
             </td>
         </tr>
 }
