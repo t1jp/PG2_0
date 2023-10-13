@@ -16,6 +16,30 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Eduardo Amaya\Desktop\PG2\Proyecto_Graduacion
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Auditoria/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVkaXRvcmlhXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Auditoria/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVkaXRvcmlhXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Auditoria/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVkaXRvcmlhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Entrevista/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50cmV2aXN0YVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Entrevista/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50cmV2aXN0YVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Entrevista/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50cmV2aXN0YVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

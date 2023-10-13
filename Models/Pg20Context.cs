@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Utilities_Net_6_MVC;
+using Proyecto_Graduacion.Models;
 
 namespace Proyecto_Graduacion.Models;
 
@@ -81,9 +82,12 @@ public partial class Pg20Context : DbContext,IAppDbContext
     public virtual DbSet<TipoTecniasMuestreo> TipoTecniasMuestreos { get; set; }
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
+    public virtual DbSet<entrevistaaudit> entrevistaaudit { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
+        modelBuilder.Entity<entrevistaaudit>(e => e.HasNoKey());
         modelBuilder.Entity<Auditoria>(entity =>
         {
             entity.HasKey(e => e.IdAuditoria);
@@ -659,4 +663,6 @@ public partial class Pg20Context : DbContext,IAppDbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+    public DbSet<Proyecto_Graduacion.Models.EntrevistaViewModel>? EntrevistaViewModel { get; set; }
 }
