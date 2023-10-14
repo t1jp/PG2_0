@@ -34,8 +34,17 @@
                 @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
             <td>
-                    <button class="btn btn-primary" onclick="window.open('https://localhost:7257/Docs/@item.RutaDoc','_blank');">Ver Documento</button>
-            </td>
+                    @if (item.RutaDoc.Contains(".pdf"))
+                    {
+                        
+                        <button class="btn btn-primary" onclick="window.open('https://localhost:7257/Docs/@item.RutaDoc','_blank');">Ver Documento</button>
+                    }
+                    else{
+                        <a onclick="window.open('https://localhost:7257/Docs/@item.RutaDoc','_blank');">
+                            <img style="width:150px;height:150px;cursor: pointer" src="https://localhost:7257/Docs/@item.RutaDoc" />
+                        </a>
+                        }
+                    </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdPapeles">Edit</a> |
                 <a asp-action="Delete" asp-route-id="@item.IdPapeles">Delete</a>

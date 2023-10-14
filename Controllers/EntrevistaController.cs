@@ -106,6 +106,14 @@ namespace Proyecto_Graduacion.Controllers
         {
             if (!ModelState.IsValid)
             {
+                var oEntrevistaAuditoria = await _entrevistaAuditoriaRepository.GetByID(model.idEntrevistaAuditoria);
+                var Entrevista = await _entrevistaRepository.GetByID(oEntrevistaAuditoria.IdEntrevista);
+                var Auditoria = await _auditoriaRepository.GetByID(oEntrevistaAuditoria.IdAuditoria);
+                List<Auditoria> Auditorias = (List<Auditoria>)await _auditoriaRepository.GetAllWithIncludes(a => a.IdInstitucionNavigation);
+                ViewData["Auditorias"] = SelectListItemHelper.ToSelectListItems(Auditorias,
+                    a => string.Concat(a.IdAuditoria.ToString(), "-", a.IdInstitucionNavigation.Nombre),
+                    a => a.IdAuditoria.ToString(),
+                    Auditoria.IdAuditoria.ToString());
                 return View(model);
             }
             try

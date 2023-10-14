@@ -1,0 +1,44 @@
+﻿@model Proyecto_Graduacion.Models.Hallazgo
+
+@{
+    ViewData["Title"] = "Edit";
+    var auditorias = (List<SelectListItem>)ViewData["Auditorias"];
+    var tipos = (List<SelectListItem>)ViewData["TipoHallazgo"];
+}
+
+<h1>Edit</h1>
+
+<h4>Hallazgo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdHallazgo" />
+            <div class="form-group">
+                <label asp-for="IdTipoHallazgo" class="control-label"></label>
+                <select asp-for="IdTipoHallazgo" class="form-control" asp-items="tipos"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescripcionHallazgo" class="control-label"></label>
+                <input asp-for="DescripcionHallazgo" class="form-control" />
+                <span asp-validation-for="DescripcionHallazgo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdAuditoria" class="control-label"></label>
+                <select asp-for="IdAuditoria" class="form-control" asp-items="auditorias"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

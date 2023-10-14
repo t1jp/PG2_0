@@ -58,24 +58,50 @@ namespace Proyecto_Graduacion.Controllers
         }
 
         // GET: PapelesController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            var oPapel = await _papelesRepository.GetByID(id);
+            var oPapeles = new papeles() 
+            {
+                idPapeles = oPapel.IdPapeles,
+                tipoPapeles = oPapel.TipoPapeles,
+                descripcion = oPapel.Descripcion,
+                rutaDoc = oPapel.RutaDoc,
+            };
+            return View(oPapeles);
         }
 
         // POST: PapelesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(papeles papel)
         {
-            try
+            if (papel.File != null)
             {
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Docs");
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+                var rutaArchivo = Path.Combine(path, papel.File.FileName);
+                using var fileStream = new FileStream(rutaArchivo, FileMode.Create);
+                await papel.File.CopyToAsync(fileStream);
+                var oPapel = await _papelesRepository.GetByID(papel.idPapeles);
+                oPapel.Descripcion = papel.descripcion;
+                oPapel.TipoPapeles = papel.tipoPapeles;
+                oPapel.RutaDoc = papel.File.FileName;
+                await _papelesRepository.Update(oPapel);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            else
             {
-                return View();
+                var oPapel = await _papelesRepository.GetByID(papel.idPapeles);
+                oPapel.Descripcion = papel.descripcion;
+                oPapel.TipoPapeles = papel.tipoPapeles;
+                await _papelesRepository.Update(oPapel);
+                return RedirectToAction(nameof(Index));
             }
+            return RedirectToAction("Error");
         }
 
         // GET: PapelesController/Delete/5

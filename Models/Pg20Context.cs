@@ -83,11 +83,13 @@ public partial class Pg20Context : DbContext,IAppDbContext
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
     public virtual DbSet<entrevistaaudit> entrevistaaudit { get; set; }
+    public virtual DbSet<papeles> papeles { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-
+        modelBuilder.Entity<papeles>().Ignore(x=>x.File);
         modelBuilder.Entity<entrevistaaudit>(e => e.HasNoKey());
+        modelBuilder.Entity<papeles>(e => e.HasNoKey());
         modelBuilder.Entity<encuestaaudit>(e => e.HasNoKey());
         modelBuilder.Entity<Auditoria>(entity =>
         {
@@ -668,4 +670,11 @@ public partial class Pg20Context : DbContext,IAppDbContext
     public DbSet<Proyecto_Graduacion.Models.EntrevistaViewModel>? EntrevistaViewModel { get; set; }
 
     public DbSet<Proyecto_Graduacion.Models.EncuestaViewModel>? EncuestaViewModel { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.encuestaaudit>? encuestaaudit { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.encuestaauditEdit>? encuestaauditEdit { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.hallazgos>? hallazgos { get; set; }
+
 }

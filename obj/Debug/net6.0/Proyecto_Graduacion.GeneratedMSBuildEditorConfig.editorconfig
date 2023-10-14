@@ -28,6 +28,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVkaXRvcmlhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Encuesta/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5jdWVzdGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Encuesta/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5jdWVzdGFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Encuesta/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5jdWVzdGFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +50,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Entrevista/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50cmV2aXN0YVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Foda/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9kYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Foda/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9kYVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Foda/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9kYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Hallazgo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFsbGF6Z29cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Hallazgo/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFsbGF6Z29cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Hallazgo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFsbGF6Z29cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Home/Index.cshtml]
@@ -66,6 +98,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Papeles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFwZWxlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Papeles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFwZWxlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Eduardo Amaya/Desktop/PG2/Proyecto_Graduacion/Views/Papeles/Index.cshtml]
