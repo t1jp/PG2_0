@@ -677,4 +677,10 @@ public partial class Pg20Context : DbContext,IAppDbContext
 
     public DbSet<Proyecto_Graduacion.Models.hallazgos>? hallazgos { get; set; }
 
+    public DbSet<Proyecto_Graduacion.Models.PruebaViewModel>? PruebaViewModel { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.pruebas>? pruebas { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.pruebaauditEdit>? pruebaauditEdit { get; set; }
+
 }
