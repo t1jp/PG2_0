@@ -26,15 +26,15 @@ namespace Proyecto_Graduacion.Controllers
         {
             var listado = (List<PruebasAuditorium>?)await _pruebaAuditoriaRepository
                 .GetAllWithIncludes(a => a.IdAuditoriaNavigation,
+                i => i.IdAuditoriaNavigation.IdInstitucionNavigation,
                 e => e.IdPruebaNavigation,
-                i => i.IdAuditoriaNavigation.IdInstitucionNavigation);
+                tp=>tp.IdPruebaNavigation.IdTipoPruebaNavigation);
             var listadoViewModel = listado.Select(x => new PruebaViewModel()
             {
                 Auditoria = string.Concat(x.IdAuditoria, "-", x.IdAuditoriaNavigation.IdInstitucionNavigation.Nombre),
                 Descripcion = x.IdPruebaNavigation.Descripcion,
                 IdPrueba = (int)x.IdPruebaAuditoria,
-                /*TipoPrueba = x.IdPruebaNavigation.IdTipoPruebaNavigation.Descripcion
-                 Aqui es donde esta el error al momento de buscar el index*/
+                TipoPrueba = x.IdPruebaNavigation.IdTipoPruebaNavigation.Descripcion
             });
             return View(listadoViewModel);
         }

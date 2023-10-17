@@ -11,7 +11,6 @@ public partial class Prueba
     public int? IdTipoPrueba { get; set; }
 
     public string? Descripcion { get; set; }
-    [Display(Name = "Auditoria")]
     public virtual TipoPrueba? IdTipoPruebaNavigation { get; set; }
 
     public virtual ICollection<PruebasAuditorium> PruebasAuditoria { get; set; } = new List<PruebasAuditorium>();
