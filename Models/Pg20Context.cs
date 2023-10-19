@@ -683,4 +683,16 @@ public partial class Pg20Context : DbContext,IAppDbContext
 
     public DbSet<Proyecto_Graduacion.Models.pruebaauditEdit>? pruebaauditEdit { get; set; }
 
+    public DbSet<Proyecto_Graduacion.Models.EvidenciaViewModel>? EvidenciaViewModel { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.evidencias>? evidencias { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.evidenciaauditEdit>? evidenciaauditEdit { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.TecnicaViewModel>? TecnicaViewModel { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.tecnicas>? tecnicas { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.tecnicaauditEdit>? tecnicaauditEdit { get; set; }
+
 }

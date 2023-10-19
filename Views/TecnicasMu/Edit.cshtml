@@ -1,0 +1,46 @@
+﻿@model Proyecto_Graduacion.Models.tecnicaauditEdit
+
+@{
+    ViewData["Title"] = "Edit";
+    var auditorias = (List<SelectListItem>)ViewData["Auditorias"];
+    var tipoTecnica = (List<SelectListItem>)ViewData["TipoTecnica"];
+}
+
+<h1>Edit</h1>
+
+<h4>tecnicaauditEdit</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="idTecnicaAuditoria" />
+            <div class="form-group">
+                <label asp-for="IdAuditoria" class="control-label"></label>
+                <select asp-for="IdAuditoria" asp-items="auditorias" class="form-select"></select>
+                <span asp-validation-for="IdAuditoria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdTipoTecnicas" class="control-label"></label>
+                <select asp-for="IdTipoTecnicas" asp-items="tipoTecnica" class="form-select"></select>
+                <span asp-validation-for="IdTipoTecnicas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
