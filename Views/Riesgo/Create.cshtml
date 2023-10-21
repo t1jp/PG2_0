@@ -1,0 +1,45 @@
+﻿@model Proyecto_Graduacion.Models.riesgos
+
+@{
+    ViewData["Title"] = "Create";
+    var auditorias = (List<SelectListItem>)ViewData["Auditorias"];
+    var tipoRiesgos = (List<SelectListItem>)ViewData["TipoRiesgo"];
+}
+
+<h1>Create</h1>
+
+<h4>riesgos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" asp-controller="Riesgo" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdTipoRiesgo" class="control-label"></label>
+                <select asp-for="IdTipoRiesgo" asp-items="tipoRiesgos" class="form-select"></select>
+                <span asp-validation-for="IdTipoRiesgo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdAuditoria" class="control-label"></label>
+                <select asp-for="IdAuditoria" asp-items="auditorias" class="form-select"></select>
+                <span asp-validation-for="IdAuditoria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

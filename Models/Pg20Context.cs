@@ -91,6 +91,7 @@ public partial class Pg20Context : DbContext,IAppDbContext
         modelBuilder.Entity<entrevistaaudit>(e => e.HasNoKey());
         modelBuilder.Entity<papeles>(e => e.HasNoKey());
         modelBuilder.Entity<encuestaaudit>(e => e.HasNoKey());
+        modelBuilder.Entity<materialidadaudit>(e => e.HasNoKey());
         modelBuilder.Entity<Auditoria>(entity =>
         {
             entity.HasKey(e => e.IdAuditoria);
@@ -694,5 +695,23 @@ public partial class Pg20Context : DbContext,IAppDbContext
     public DbSet<Proyecto_Graduacion.Models.tecnicas>? tecnicas { get; set; }
 
     public DbSet<Proyecto_Graduacion.Models.tecnicaauditEdit>? tecnicaauditEdit { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.RiesgoViewModel>? RiesgoViewModel { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.riesgos>? riesgos { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.riesgoauditEdit>? riesgoauditEdit { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.MaterialidadViewModel>? MaterialidadViewModel { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.materialidadaudit>? materialidadaudit { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.materialidadauditEdit>? materialidadauditEdit { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.causaefectoaudit>? causaefectoaudit { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.planeacionaudit>? planeacionaudit { get; set; }
+
+    public DbSet<Proyecto_Graduacion.Models.objetivoalcanceaudit>? objetivoalcanceaudit { get; set; }
 
 }
